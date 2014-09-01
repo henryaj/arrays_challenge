@@ -14,6 +14,14 @@ describe Array do
 			expect(array.injector(0) { |mem,x| mem + x } ).to eq 6
 		end
 
+		it 'when given a block with *, should multiply each value with mem and give the result' do
+			expect(array.injector(1) { |mem,x| mem * x } ).to eq 6
+		end
+
+		it 'when given a block with -, should subtract each value with mem and give the result' do
+			expect(array.injector(1) { |mem,x| mem * x } ).to eq 6
+		end
+
 	end
 
 end
