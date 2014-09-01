@@ -1,23 +1,12 @@
-class NewArray < Array
+class Array
 
-	def hello
-		puts hello
-	end
-
-	def inject_new(start, operator)
-		memo = start
-		self.each do |x|
-			puts x
-			if operator == "+"
-				memo = memo + x
-			elsif operator == "-"
-				memo = memo - x
-			elsif operator == "*"
-				memo = memo * x
-			elsif operator == "/"
-				memo = memo / x
-			end
+	def injector(start, &block)
+		mem = start
+		self.each do |number|
+			yield mem, number
+			mem = mem
 		end
+		mem
 	end
 
 end
