@@ -1,15 +1,19 @@
 require 'arrays'
 
-describe NewArray do
+describe Array do
 
-	it 'should be a subclass of Array' do
-		expect(NewArray.ancestors).to include(Array)
-	end
-	
-	it 'should accept an array' do
-		a = NewArray.new
-		a << [1,2,3,4]
-		expect(NewArray.inject_new(a)).to eq [1,2,3,4]
+	describe 'injector' do
+
+		let(:array) { [1,2,3] }
+
+		it 'can be called as a method on an array' do
+			expect(array.methods).to include(:injector)
+		end
+
+		it 'when given a block with a +, should add the values and iterate' do
+			expect(array.injector(0) { |mem,x| mem + x } ).to eq 6
+		end
+
 	end
 
 end
