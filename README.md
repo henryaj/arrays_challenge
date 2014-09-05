@@ -2,7 +2,6 @@
 | ------------------------------------------------ | ------ |
 
 # Arrays Challenge
-==================
 
 Weekly challenge from week four at @makersacademy.
 
