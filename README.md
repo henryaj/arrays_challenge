@@ -3,6 +3,6 @@
 
 # Arrays Challenge
 
-Weekly challenge from week four at @makersacademy.
+Weekly challenge from week four at Makers Academy.
 
 Our task was to rewrite Ruby's `inject` method, either by reopening the `Array` class and monkey-patching, or by subclassing `Array`. We had to use RSpec testing throughout.
