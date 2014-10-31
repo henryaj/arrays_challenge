@@ -10,11 +10,11 @@ Our task was to rewrite Ruby's `inject` method, either by reopening the `Array` 
 I opted to reopen `Array` and add a new method to it – `injector` – which handles calls with a symbol:
 
 ```ruby
-array.inject(:+)
+array.injector(:+)
 ```
 
 –and with an index and a block:
 
 ```ruby
-array.inject(0) { |mem, x| mem + x }
+array.injector(0) { |mem, x| mem + x }
 ```
